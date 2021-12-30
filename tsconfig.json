@@ -2,11 +2,13 @@
   "compilerOptions": {
     "jsx": "react",
     "target": "esnext",
+    "module": "esnext",
     "moduleResolution": "node",
     "strict": true,
     "declaration": true,
     "noUnusedLocals": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "types": ["vite/client"]
   },
   "include": [
     "./**/*.ts",

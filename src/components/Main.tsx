@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
-import { getAuth, onAuthStateChanged } from '@firebase/auth'
-import { setupFirebase } from './plugins/firebase'
-import { AuthProvider, useSignIn, useSignOut } from './contexts/UserContext'
-import { Main } from './components/Main'
+import { getAuth, onAuthStateChanged } from 'firebase/auth'
+import { setupFirebase } from '../plugins/firebase'
+import { Router } from '../routes/Router'
+import { useSignIn, useSignOut } from '../contexts/UserContext'
 
-const App = () => {
+export const Main = () => {
   const { signIn } = useSignIn()
   const { signOut } = useSignOut()
 
@@ -23,10 +23,8 @@ const App = () => {
   }, [])
 
   return (
-    <AuthProvider>
-      <Main />
-    </AuthProvider>
+    <main>
+      <Router />
+    </main>
   )
 }
-
-export default App
