@@ -1,5 +1,5 @@
 import React, { lazy, Suspense } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Loading } from '../components/Loading'
 
 const Top = lazy(() => import('../pages/Top'))
@@ -9,14 +9,10 @@ export const Router = () => {
   return (
     <BrowserRouter>
       <Suspense fallback={<Loading />}>
-        <Switch>
-          <Route exact path="/">
-            <Top />
-          </Route>
-          <Route path="*">
-            <Error />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Top />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
       </Suspense>
     </BrowserRouter>
   )
