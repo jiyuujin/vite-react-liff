@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import fs from 'fs'
 
 const viteEnv = {}
 Object.keys(process.env).forEach((key) => {
@@ -16,5 +17,11 @@ export default defineConfig({
     emptyOutDir: true
   },
   plugins: [react()],
-  define: viteEnv
+  define: viteEnv,
+  server: {
+    https: {
+      key: fs.readFileSync('./example.com+5-key.pem'),
+      cert: fs.readFileSync('./example.com+5.pem')
+    }
+  }
 })
