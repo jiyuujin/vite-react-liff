@@ -1,10 +1,33 @@
-import React from 'react'
-import { useAuthState } from '../contexts/UserContext'
-import { SignInButton } from '../components/SignInButton'
-import { SignOutButton } from '../components/SignOutButton'
+import React, { useEffect, useState } from 'react'
 
 const Top = () => {
-  const { state } = useAuthState()
+  const [liffObject, setLiffObject] = useState<any>(null)
+
+  const [profileName, setProfileName] = useState<string>('')
+
+  useEffect(() => {
+    import('@line/liff').then((liff: any) => {
+      liff
+        .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
+        .then(() => {
+          if (!liff.isLoggedIn()) {
+            liff.login({})
+          }
+          setLiffObject(liff)
+          liff
+            .getProfile()
+            .then((profile: any) => {
+              setProfileName(profile.displayName)
+            })
+            .catch((err: any) => {
+              console.error({ err })
+            })
+        })
+        .catch((err: any) => {
+          console.error({ err })
+        })
+    })
+  }, [])
 
   return (
     <>
@@ -17,9 +40,7 @@ const Top = () => {
               alt="nekohack logo"
             />
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
-              {state.state === 'UNKNOWN' ? (
-                <>{'Sign in to your account'}</>
-              ) : state.state === 'SIGNED_OUT' ? (
+              {!liffObject?.isLoggedIn() ? (
                 <>{'Sign in to your account'}</>
               ) : (
                 <>{'You are signed to your account'}</>
@@ -36,12 +57,8 @@ const Top = () => {
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
             <div>
-              {state.state === 'UNKNOWN' ? (
-                <SignInButton />
-              ) : state.state === 'SIGNED_OUT' ? (
-                <SignInButton />
-              ) : (
-                <SignOutButton />
+              {liffObject?.isLoggedIn() && (
+                <>{`${profileName} (${liffObject?.getVersion()})`}</>
               )}
             </div>
           </form>
