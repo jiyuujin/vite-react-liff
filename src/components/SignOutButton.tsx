@@ -1,16 +1,19 @@
 import React from 'react'
 import { useAuth } from '../plugins/firebase'
+import { useSignOut } from '../contexts/UserContext'
 
 type Props = {
-  //
+  logout: () => void
 }
 
 export const SignOutButton = (props: Props) => {
+  const { logout } = props
+  const { signOut } = useSignOut()
+  const auth = useAuth()
   const handleClick = () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const auth = useAuth()
-
     auth.signOut()
+    signOut()
+    logout()
   }
 
   return (
