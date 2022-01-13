@@ -5,6 +5,7 @@ import { SignInButton } from '../components/SignInButton'
 const Top = () => {
   const [liffObject, setLiffObject] = useState<any>(null)
   const [profileName, setProfileName] = useState<string>('')
+  const [pictureUrl, setPictureUrl] = useState<string>('')
 
   useEffect(() => {
     import('@line/liff').then((liff: any) => {
@@ -17,6 +18,7 @@ const Top = () => {
               .getProfile()
               .then((profile: any) => {
                 setProfileName(profile.displayName)
+                setPictureUrl(profile.pictureUrl)
               })
               .catch((err: any) => {
                 console.error({ err })
@@ -44,6 +46,13 @@ const Top = () => {
       <div className="min-h-full flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
           <div>
+            {liffObject?.isLoggedIn() && (
+              <img
+                className="mx-auto h-12 w-auto"
+                src={pictureUrl}
+                alt={`${profileName} logo`}
+              />
+            )}
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               {!liffObject?.isLoggedIn() ? (
                 <>
