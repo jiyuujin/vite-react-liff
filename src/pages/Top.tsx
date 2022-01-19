@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { SignOutButton } from '../components/SignOutButton'
 import { SignInButton } from '../components/SignInButton'
+import { SendMessagesButton } from '../components/SendMessagesButton'
 
 const Top = () => {
   const [liffObject, setLiffObject] = useState<any>(null)
@@ -31,6 +32,14 @@ const Top = () => {
     })
   }, [])
 
+  const sendMessages = async () => {
+    await liffObject.sendMessages([
+      {
+        type: 'text',
+        text: 'Hello World',
+      },
+    ])
+  }
   const logout = () => {
     liffObject.logout()
     setProfileName('')
@@ -64,6 +73,11 @@ const Top = () => {
                   {'You are signed to your account'}
                   <SignOutButton logout={logout} />
                 </>
+              )}
+            </h2>
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              {liffObject?.isLoggedIn() && (
+                <SendMessagesButton sendMessages={sendMessages} />
               )}
             </h2>
           </div>
