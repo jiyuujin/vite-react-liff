@@ -1,0 +1,33 @@
+title: "React (Vite) で LIFF アプリを作ろう"
+summary: 
+  React Tutorial から一歩踏み出してみたい人 / バックエンド経験があり、フロントを触ってみたい人へ
+
+  LINE API と連携して、ユーザー連携や LINE へのメッセージなどを解説していきます。
+
+topics: ["zenn", "vite", "react", "liff", "line"] # 5 つまで
+published: false # 下書きは false
+price: 0
+chapters:
+  - page1
+    # 今回のゴールを説明する
+    # 軽い vite / liff の用語の説明をしたい
+  - page2
+    # 環境構築: gitpod / vite
+    # Goal: web page が見えるまで
+  - page3
+    # 環境構築: liff account を作成
+    # Goal: LIFF ID の作成
+  - page4
+    # ハンズオン: LINE Login できるところまで
+    # Goal: ログイン / ログアウト できる
+  - page5
+    # 解説: vite について, ファイルの構成について
+  - page6
+    # 解説: react hooks について
+  - page7
+    # 解説: LIFF について
+  - page8
+    # チャレンジ: アイコンを表示
+    # チャレンジ: メッセージを送信
+  - page9
+    # 謝辞
