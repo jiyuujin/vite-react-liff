@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint ./ --ext ts,tsx",
-    "lint:fix": "eslint ./ --ext ts,tsx --fix"
+    "lint:fix": "eslint ./ --ext ts,tsx --fix",
+    "book": "zenn preview"
   },
   "dependencies": {
     "@line/liff": "^2.18.1",
