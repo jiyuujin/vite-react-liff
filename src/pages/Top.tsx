@@ -33,12 +33,10 @@ const Top = () => {
   }, [])
 
   const sendMessages = async () => {
-    await liffObject.sendMessages([
-      {
-        type: 'text',
-        text: 'Hello World',
-      },
-    ])
+    const messages = [{ type: 'text', text: 'Hello World' }]
+    liffObject.isInClient()
+      ? liffObject.sendMessages(messages)
+      : liffObject.shareTargetPicker(messages)
   }
   const logout = () => {
     liffObject.logout()
