@@ -8,7 +8,9 @@ Google Chromeにて、[gitpod](https://chrome.google.com/webstore/detail/gitpod-
 
 ## GitPodの追加
 
-[https://github.com/4geru/liff-vote-project](https://github.com/4geru/liff-vote-project) にアクセスし、GitPodに追加します
+[https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2](https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2) にアクセスし、GitPodに追加します
+
+<!-- TODO: branch の説明をする -->
 
 ![](/images/github-liff-vote-project.png)
 
@@ -19,25 +21,13 @@ Google Chromeにて、[gitpod](https://chrome.google.com/webstore/detail/gitpod-
 Githubからログインし、プロジェクトを作成します。
 
 ---
-
-ログインが成功すると、下記のようなページが開きます。Terminal からコマンドを実行してサーバーを起動します。
-
-![](/images/gitpod-open.png)
-
-```shell
-# npm のバージョンを上げます
-npm install -g npm
-# 今回の開発に必要なパッケージをインストールします
-npm install
-npm run start
-```
+<!-- TODO: サーバー閉じてしまった場合の復帰方法-->
 
 ---
 
 サーバーの起動が完了したら、左のタブから公開設定を `public` にし、ブラウザを開きます。
 
 ![](/images/check-gitlab-setting.png =250x)
-<!-- ![](/images/gitpod-open-window.png) -->
 
 開いたページのURLをコピーして、 LINE の LIFF URL に登録します。
 

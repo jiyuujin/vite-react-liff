@@ -49,48 +49,9 @@ LIFF を活用するために、以下の2つの設定が必要になる
 
 ![](/images/other-liff-settings.png)
 
-## spreadsheetの作成
 
-[spread sheet](https://docs.google.com/spreadsheets/u/1/d/1gkb9pAB6qb9KdwxelH0kMtZev1XwDJa9qQtav50FUXE/copy) からシートをコピーします
+<!-- firebase の設定 -->
+https://console.firebase.google.com/
 
-ツール > スクリプトエディタ でスクリプトエディタを開きます。
-
-:::message
-- googleに複数ログインしたでは、script editorを開けない場合があります。
-- 一度アカウントをログアウトしていただくと解消できる可能性があります。
-:::
-
-スクリプトエディタを開いたら、コピーしたGoogle Spread SheetのURLを `SHEET_URL` に貼り付けます。
-
-![](/images/spread-sheet-setup.png)
-
-:::message
-- Google Apps Script の URL ではなく Spread Sheet の URL です
-:::
-
-初回アクセスの場合は、アプリを承認する必要があるので、承認をします。
-
-![](/images/google-spread-sheet-first-deploy-access.png =450x)
-
-`アクセス承認` を押すと 安全ではないページ にリンクが飛びますが、アクセスし許可をします。
-
-![](/images/google-spread-sheet-first-deploy-not-allowed-url.png =450x)
-
-コピーで作成したシートのURLを `REQUEST_URL` に貼り付け、デプロイをします。
-
-![](/images/google-spread-sheet-first-deploy-after-page.png =450x)
-
-:::message
-- デプロイするときは、必ず保存を押してからデプロイを実行してください。
-- 2回目以降は、デプロイ > デプロイ管理 > 📝 から バージョンを新しいバージョンに変更し、デプロイをします。
-:::
-
-コピーした `REQUEST_URL` は Gitpod の `./public/index.html` の 15行目に貼り付けます。
-
-```html:public/index.html
-    <script>
-      // 定数を定義する
-      const LIFF_ID = 'LIFF_ID'
-      const REQUEST_URL = 'REQUEST_URL' // <- ここに貼り付ける
-    </script>
-```
+このプロジェクトで Google アナリティクスを有効にする → OFF にする
+→ 決定
