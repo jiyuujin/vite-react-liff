@@ -4,8 +4,10 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint ./ --ext ts,tsx",
-    "lint:fix": "eslint ./ --ext ts,tsx --fix",
+    "eslint": "eslint ./ --ext ts,tsx",
+    "eslint:fix": "eslint ./ --ext ts,tsx --fix",
+    "textlint": "textlint ./books/**",
+    "textlint:fix": "textlint ./books/** --fix",
     "book": "zenn preview"
   },
   "dependencies": {
@@ -26,6 +28,10 @@
     "autoprefixer": "^10.4.0",
     "eslint": "^7.7.0",
     "tailwindcss": "^3.0.8",
+    "textlint": "^12.1.0",
+    "textlint-rule-preset-ja-spacing": "^2.2.0",
+    "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "typescript": "^3.9.7",
     "vite": "^2.6.14"
   }

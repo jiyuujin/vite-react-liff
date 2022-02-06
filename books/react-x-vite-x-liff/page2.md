@@ -55,7 +55,7 @@ yarn install
 
 ### localhost で起動する
 
-[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK
+[http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK です。
 
 ```bash
 # next dev
