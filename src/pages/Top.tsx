@@ -2,11 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { SignOutButton } from '../components/SignOutButton'
 import { SignInButton } from '../components/SignInButton'
 import { SendMessagesButton } from '../components/SendMessagesButton'
+import { useUser } from '../contexts/UserContext'
 
 const Top = () => {
   const [liffObject, setLiffObject] = useState<any>(null)
   const [profileName, setProfileName] = useState<string>('')
   const [pictureUrl, setPictureUrl] = useState<string>('')
+  const { signIn, signOut } = useUser()
 
   useEffect(() => {
     import('@line/liff').then((liff: any) => {

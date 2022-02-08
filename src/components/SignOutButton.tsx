@@ -1,6 +1,6 @@
 import React from 'react'
 import { useAuth } from '../plugins/firebase'
-import { useSignOut } from '../contexts/UserContext'
+import { useUser } from '../contexts/UserContext'
 
 type Props = {
   logout: () => void
@@ -8,7 +8,7 @@ type Props = {
 
 export const SignOutButton = (props: Props) => {
   const { logout } = props
-  const { signOut } = useSignOut()
+  const { signOut } = useUser()
   const auth = useAuth()
   const handleClick = () => {
     auth.signOut()

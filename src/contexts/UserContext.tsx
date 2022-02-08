@@ -58,18 +58,12 @@ export const useAuthState = () => {
   }
 }
 
-export const useSignIn = () => {
+export const useUser = () => {
   const { dispatch } = useContext(AuthContext)
   return {
     signIn: (user: User) => {
       dispatch({ type: 'SIGN_IN', payload: { user } })
     },
-  }
-}
-
-export const useSignOut = () => {
-  const { dispatch } = useContext(AuthContext)
-  return {
     signOut: () => {
       dispatch({ type: 'SIGN_OUT' })
     },
