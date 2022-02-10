@@ -5,22 +5,22 @@ import { Router } from '../routes/Router'
 import { useSignIn, useSignOut } from '../contexts/UserContext'
 
 export const Main = () => {
-  const { signIn } = useSignIn()
-  const { signOut } = useSignOut()
+  // const { signIn } = useSignIn()
+  // const { signOut } = useSignOut()
 
-  useEffect(() => {
-    setupFirebase()
+  // useEffect(() => {
+  //   setupFirebase()
 
-    const auth = getAuth()
+  //   const auth = getAuth()
 
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        signIn(user)
-      } else {
-        signOut()
-      }
-    })
-  }, [])
+  //   onAuthStateChanged(auth, (user) => {
+  //     if (user) {
+  //       signIn(user)
+  //     } else {
+  //       signOut()
+  //     }
+  //   })
+  // }, [])
 
   return (
     <main>
