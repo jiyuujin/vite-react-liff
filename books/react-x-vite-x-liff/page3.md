@@ -4,13 +4,13 @@ title: "LINE API(LIFF)の設定"
 
 ## LINE の設定
 
-[LINE Developers](https://developers.line.biz/console/) からLINEの設定をしていきます
+[LINE Developers](https://developers.line.biz/console/) から LINE の設定をしていきます。
 
 ## 初回利用の方は新規プロバイダーの登録をしてください
-:::details LINE Developerの登録(初回利用の方のみ)
+:::details LINE Developer の登録(初回利用の方のみ)
 [#Messaging APIを始めよう](https://developers.line.biz/ja/docs/messaging-api/getting-started/) を参考に 3. まで進めてください。
 
-1. LINE Developersコンソールにログインする
+1. LINE Developers コンソールにログインする
 2. 開発者として登録する（初回ログイン時のみ）
 3. 新規プロバイダーを作成する
 :::
@@ -18,7 +18,7 @@ title: "LINE API(LIFF)の設定"
 ![](/images/create-liff-project.png)
 
 ### LIFF の作成
-LINE Loginのアカウントを作成したら、 `LIFF` > `ログイン` を選択し、LIFFの情報を記述していきます。
+LINE Login のアカウントを作成したら、 `LIFF` > `ログイン` を選択し、LIFF の情報を記述していきます。
 
 ```text
 LIFFアプリ名: アンケートアプリ
@@ -28,7 +28,7 @@ Scope: ✅ profile ✅ すべてを表示 > chat_message.write
 ボットリンク機能: Off
 ```
 
-の設定で、LIFFアプリを作成します。
+の設定で、LIFF アプリを作成します。
 
 ![](/images/check-liff-app.png)
 
@@ -43,7 +43,7 @@ LIFF URL は LINE のチャットに貼り付けます。
     </script>
 ```
 
-LIFF を活用するために、以下の2つの設定が必要になる
+LIFF を活用するために、以下の 2 つの設定が必要になる。
 - LIFF App を公開する。公開すると他の人もアンケートに答えられる。お試しの場合は開発モードでもテスト可能。
 - [シェアターゲットピッカー](https://developers.line.biz/ja/reference/liff/#share-target-picker)を有効にする
 
@@ -53,5 +53,5 @@ LIFF を活用するために、以下の2つの設定が必要になる
 <!-- firebase の設定 -->
 https://console.firebase.google.com/
 
-このプロジェクトで Google アナリティクスを有効にする → OFF にする
-→ 決定
+このプロジェクトで Google アナリティクスの有効化 → OFF にする
+→ 決定。

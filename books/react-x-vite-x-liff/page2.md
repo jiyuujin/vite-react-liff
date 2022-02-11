@@ -2,23 +2,37 @@
 title: "環境構築"
 ---
 
-## GitPodの拡張の導入
+## Gitpod を利用する
 
-Google Chromeにて、[gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) の拡張を追加します。
+この度、開発環境として [Gitpod](https://www.gitpod.io/) を利用します。
 
-## GitPodの追加
+![](https://i.imgur.com/YwYpybr.jpg)
 
-[https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2](https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2) にアクセスし、GitPodに追加します
+いわゆる Web ブラウザで気軽に開発できる IDE (統合開発環境) です。
+
+Public リポジトリなら無料で利用でき Private リポジトリも [有料](https://www.gitpod.io/pricing/) で利用できる。
+
+### GitPod の拡張を導入する
+
+GitPod の拡張を利用すれば楽です。 Google Chrome にて、[gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) の拡張を追加します。
+
+### GitPod を追加する
+
+[https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2](https://github.com/jiyuujin/template-vite-react-liff) にアクセスし、GitPod に追加します。
 
 <!-- TODO: branch の説明をする -->
 
 ![](/images/github-liff-vote-project.png)
 
 :::message
-- 月の利用上限が50時間までです。
+- 月の利用上限が 50 時間までです。
 :::
 
-Githubからログインし、プロジェクトを作成します。
+Github からログインし、プロジェクトを作成します。
+
+なお、こちら [GitPod 実行用 URL](https://gitpod.io/#https://github.com/jiyuujin/template-vite-react) からも進められます。
+
+https://gitpod.io/#https://github.com/jiyuujin/template-vite-react
 
 ---
 <!-- TODO: サーバー閉じてしまった場合の復帰方法-->
@@ -29,23 +43,8 @@ Githubからログインし、プロジェクトを作成します。
 
 ![](/images/check-gitlab-setting.png =250x)
 
-開いたページのURLをコピーして、 LINE の LIFF URL に登録します。
+開いたページの URL をコピーして、 LINE の LIFF URL に登録します。
 
-## Gitpod を利用する
-
-この度、開発環境として [Gitpod](https://www.gitpod.io/) を利用する。
-
-![](https://i.imgur.com/YwYpybr.jpg)
-
-いわゆる Web ブラウザで気軽に開発できる IDE (統合開発環境) です。
-
-Public リポジトリなら無料で利用でき Private リポジトリも [有料](https://www.gitpod.io/pricing/) で利用できる。
-
-### GitPod 実行用 URL
-
-[こちら](https://gitpod.io/#https://github.com/jiyuujin/template-vite-react) より進めてください。
-
-https://gitpod.io/#https://github.com/jiyuujin/template-vite-react
 
 <!-- vite の環境構築 -->
 

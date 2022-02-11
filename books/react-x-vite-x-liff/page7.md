@@ -8,12 +8,12 @@ title: "LIFF について"
 
 公式：[ドキュメント > LINE Front-end Framework > LINE Front-end Framework](https://developers.line.biz/ja/docs/liff/overview/)
 
-- ブラウザでLINEの機能が使えるフレームワークです。
+- ブラウザで LINE の機能が使えるフレームワークです。
   - ユーザー情報
-  - OS/言語情報 等
-  - Botとの友達情報
-  - メッセージ送信（LINE内ブラウザのみ）
-  - QRスキャン（LINE内ブラウザのみ）
+  - OS/言語情報等
+  - Bot との友達情報
+  - メッセージ送信（LINE 内ブラウザのみ）
+  - QR スキャン（LINE 内ブラウザのみ）
 
 ## APIについて
 
@@ -35,7 +35,7 @@ title: "LIFF について"
 
 ## 画面サイズについて
 
-LIFFブラウザの画面の大きさは `Full`, `Tall`, `Compact` の3種類が選択できます。
+LIFF ブラウザの画面の大きさは `Full`, `Tall`, `Compact` の 3 種類が選択できます。
 
 ![](/images/liff-browser-size.png)
 
