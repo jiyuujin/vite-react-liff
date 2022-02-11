@@ -12,21 +12,21 @@ title: "環境構築"
 
 Public リポジトリなら無料で利用でき Private リポジトリも [有料](https://www.gitpod.io/pricing/) で利用できる。
 
+:::message
+- 月の利用上限が 50 時間までです。
+:::
+
 ### GitPod の拡張を導入する
 
 GitPod の拡張を利用すれば楽です。 Google Chrome にて、[gitpod](https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki) の拡張を追加します。
 
 ### GitPod を追加する
 
-[https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2](https://github.com/jiyuujin/template-vite-react-liff) にアクセスし、GitPod に追加します。
+[https://github.com/jiyuujin/template-vite-react](https://github.com/jiyuujin/template-vite-react) にアクセスし、GitPod に追加します。
 
 <!-- TODO: branch の説明をする -->
 
 ![](/images/github-liff-vote-project.png)
-
-:::message
-- 月の利用上限が 50 時間までです。
-:::
 
 Github からログインし、プロジェクトを作成します。
 
