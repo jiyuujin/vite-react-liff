@@ -22,7 +22,7 @@ GitPod の拡張を利用すれば楽です。 Google Chrome にて、[gitpod](h
 
 ### GitPod を追加する
 
-[https://gitpod.io/#https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1](https://gitpod.io/#https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1) にアクセスし、GitPod に追加します。
+[https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1](https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1) にアクセスし、GitPod に追加します。
 
 <!-- TODO: branch の説明をする -->
 
