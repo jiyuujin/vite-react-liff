@@ -32,7 +32,7 @@ Github からログインし、プロジェクトを作成します。
 
 なお、こちら [GitPod 実行用 URL](https://gitpod.io/#https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1) からも進められます。
 
-https://gitpod.io/#https://github.com/jiyuujin/template-vite-react
+https://gitpod.io/#https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1
 
 ---
 <!-- TODO: サーバー閉じてしまった場合の復帰方法-->

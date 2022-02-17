@@ -33,7 +33,7 @@ https://yuma-kitamura.nekohack.me/
 
 まずは下記リポジトリをご確認いただければ幸いです。
 
-https://github.com/jiyuujin/template-vite-react
+https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1
 
 ### 今回のゴール
 
