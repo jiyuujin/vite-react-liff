@@ -21,7 +21,7 @@ title: "LINE API(LIFF)の設定"
 LINE Login のアカウントを作成したら、 `LIFF` > `ログイン` を選択し、LIFF の情報を記述していきます。
 
 ```text
-LIFFアプリ名: アンケートアプリ
+LIFFアプリ名: Vite app
 サイズ: Full
 エンドポイントURL: gitpod で起動した Web アプリの URL
 Scope: ✅ profile ✅ すべてを表示 > chat_message.write
@@ -35,12 +35,15 @@ Scope: ✅ profile ✅ すべてを表示 > chat_message.write
 作成した LIFF ID を public/index.html の LIFF_ID に登録します。
 LIFF URL は LINE のチャットに貼り付けます。
 
-```html:public/index.html
-    <script>
-      // 定数を定義する
-      const LIFF_ID = 'LIFF_ID' // <- ここに貼り付ける
-      const REQUEST_URL = 'REQUEST_URL'
-    </script>
+```shell:.env
+VITE_APP_FIREBASE_KEY="YOUR_VITE_APP_FIREBASE_KEY"
+VITE_APP_FIREBASE_DOMAIN="YOUR_VITE_APP_FIREBASE_DOMAIN"
+VITE_APP_FIREBASE_DATABASE="YOUR_VITE_APP_FIREBASE_DATABASE"
+VITE_APP_FIREBASE_PROJECT_ID="YOUR_VITE_APP_FIREBASE_PROJECT_ID"
+VITE_APP_FIREBASE_STORAGE_BUCKET="YOUR_VITE_APP_FIREBASE_STORAGE_BUCKET"
+VITE_APP_FIREBASE_SENDER_ID="YOUR_VITE_APP_FIREBASE_SENDER_ID"
+VITE_APP_FIREBASE_APPID="YOUR_VITE_APP_FIREBASE_APPID"
+VITE_APP_LIFF_ID="YOUR_VITE_APP_LIFF_ID" # => ここを上書きする
 ```
 
 LIFF を活用するために、以下の 2 つの設定が必要になる。
