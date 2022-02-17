@@ -272,23 +272,6 @@ export default defineConfig({
 
 もちろん vite.config.js では ES Modules で書けます。
 
-#### 環境変数を使う
-
-これまで `process.env` で読み取っていた環境変数を ES Modules で読み取れるように `import.meta.env` に変更する必要があります。
-
-```js
-const viteEnv = {}
-Object.keys(process.env).forEach((key) => {
-  if (key.startsWith(`VITE_`)) {
-    viteEnv[`import.meta.env.${key}`] = process.env[key]
-  }
-})
-
-export default defineConfig({
-  define: viteEnv,
-})
-```
-
 #### HTTPS 環境を作る
 
 :::message

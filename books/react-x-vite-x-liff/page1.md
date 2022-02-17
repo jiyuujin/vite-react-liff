@@ -31,6 +31,36 @@ https://yuma-kitamura.nekohack.me/
 
 ## 参照リポジトリ
 
-下記リポジトリをご確認いただければ幸いです。
+まずは下記リポジトリをご確認いただければ幸いです。
+
+https://github.com/jiyuujin/template-vite-react
+
+### 今回のゴール
+
+今回は下記リポジトリで [Tailwind CSS](https://tailwindcss.com/) を利用してスタイルを装飾、またホスティングには [Firebase Hosting](https://firebase.google.com/docs/hosting) を利用している。
 
 https://github.com/jiyuujin/vite-react-liff
+
+#### [`ver.2022.3.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.2)
+
+`shareTargetPicker` を利用して外部の Web ブラウザで LINE にメッセージを送信する。
+
+#### [`ver.2022.3.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.1)
+
+LINE アプリ内の Web ブラウザでメッセージを送信する。
+
+#### [`ver.2022.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.2)
+
+LINE ログイン時にアイコン画像を表示している。
+
+#### [`ver.2022.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.1)
+
+LINE Front-end Framework を利用して LINE 認証を実装している。
+
+#### [`ver.2021.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.2)
+
+React Router を [v6](https://remix.run/blog/react-router-v6) に更新している。
+
+#### [`ver.2021.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2021.1)
+
+Firebase Authentication の Google 認証を実装している。
