@@ -5,9 +5,105 @@ title: "LINEログインをしよう"
 <!-- コーディング部分 -->
 <!-- もう一ページいるかも -->
 
-## SDK インストール
+## SDK を使う前に
 
-LINE Front-end Framework (LIFF) を React 上で使うために [`@line/liff`](https://www.npmjs.com/package/@line/liff) をインストールします。
+今回は [react-router](https://reactrouter.com/) を使った SPA アプリを例に取ります。
+
+https://reactrouter.com/
+
+と言うのも LIFF 初期化の一環で `liff.login()` をかける前に URL がエンコードされており、そのままでルーティングされることはありません。
+
+Router の外側で LIFF の初期化を行った上で URL をデコードするとルーティングされます。
+
+### `Router` コンポーネントを作成する
+
+```tsx
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+const Top = () => import('../pages/Top')
+const Error = (() => import('../pages/Error')
+
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Top />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
+    </BrowserRouter>
+  )
+}
+```
+
+遅延ロードも `Suspense` コンポーネントと合わせ、下記のように書けます。
+
+```tsx
+import React, { lazy, Suspense } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Loading } from '../components/Loading'
+
+const Top = lazy(() => import('../pages/Top'))
+const Error = lazy((() => import('../pages/Error'))
+
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <Suspense fallback={<Loading />}>
+        <Routes>
+          <Route path="/" element={<Top />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </Suspense>
+    </BrowserRouter>
+  )
+}
+```
+
+:::details react-router v5 と比較する。
+
+昨年 2021 年の冬に v6 がリリースされました。
+
+これまでに stable なバージョンとして、リリースされていた [`ver.5.2.1`](https://www.npmjs.com/package/react-router/v/5.2.1) と比較してみた違いは、下記の通りです。
+
+- Route が設定の順番に左右されなくなった (現在の URL に最適な Route を自動的に選択できる)
+- 直感的に階層構造のパスを設定できる 
+- 容易にコードを分割でき、遅延ロードも書きやすくなった 
+- これまでの React Router よりもコードをコンパクトに書きやすい 
+- バンドルサイズが減少する
+
+```tsx
+import React from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+
+const Top = () => import('../pages/Top')
+const Error = (() => import('../pages/Error')
+
+export const Router = () => {
+  return (
+    <BrowserRouter>
+      <Switch>
+        <Route exact path="/">
+          <Top />
+        </Route>
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
+    </BrowserRouter>
+  )
+}
+```
+
+また、型定義用に `@types/react-router-dom` をインストールする必要は無くなっています。
+
+:::
+
+## SDK をインストールする
+
+Web アプリケーション上で react-router を使う準備が整いました。
+
+次いで LINE Front-end Framework (LIFF) を使うために [`@line/liff`](https://www.npmjs.com/package/@line/liff) をインストールします。
 
 ```bash
 # @line/liff

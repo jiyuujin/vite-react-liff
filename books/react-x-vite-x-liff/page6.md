@@ -346,3 +346,13 @@ const App = () => {
 ```
 
 `AuthProvider` に囲まれている Scope 内で、ユーザ情報を保持できるようになりました。
+
+## 最後に
+
+### `useState` の内側を理解する
+
+https://webneko.dev/posts/deep-dive-react-usestate
+
+### `useEffect` の内側を理解する
+
+https://webneko.dev/posts/deep-dive-react-useeffect
