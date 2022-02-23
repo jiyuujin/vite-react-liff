@@ -43,11 +43,11 @@ https://github.com/jiyuujin/vite-react-liff
 
 #### [`ver.2022.3.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.2)
 
-`shareTargetPicker` を利用して外部の Web ブラウザで LINE にメッセージを送信する。
+`shareTargetPicker` を利用して外部ブラウザで LINE にメッセージを送信する。
 
 #### [`ver.2022.3.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.1)
 
-LINE アプリ内の Web ブラウザでメッセージを送信する。
+LIFF ブラウザでメッセージを送信する。
 
 #### [`ver.2022.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.2)
 
