@@ -48,7 +48,7 @@ https://risingstars.js.org/2021
 
 create-react-app は文字通り、たったひとつのコマンドを実行することで React の Web アプリの雛形を作成できます。
 
-```bash
+```bash:bash
 # JavaScript ベースの React アプリ
 npx create-react-app <アプリ名>
 
@@ -68,7 +68,7 @@ Webpack を少し掘り下げます。 JavaScript でバンドルすることも
 
 webpack.config.js を書くことで JavaScript に変換しバンドルします。 `entry` と `output.{path, filename}` を設定することで JavaScript に変換と、それに伴いファイルが生成されています。
 
-```js
+```js:webpack.config.js
 const webpack = require('webpack')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 const path = require('path')
@@ -144,7 +144,7 @@ JavaScript に変換するため、ここの肝は TypeScript を Webpack で処
 
 tsconfig.json の例を下記に示します。
 
-```json
+```json:tsconfig.json
 {
   "compilerOptions": {
     "target": "es5",
@@ -208,7 +208,7 @@ EcmaScript は Web ブラウザ上での JavaScript の仕様を作成してい�
 
 `npm init vite` コマンドで Vite プロジェクトを作成する。
 
-```bash
+```bash:bash
 # npm
 npm init vite
 
@@ -222,7 +222,7 @@ yarn create vite
 
 事前に [Node.js 環境構築](https://reactjs.nekohack.me/#node-js-環境構築) が終わっていることを確認します。
 
-```bash
+```bash:bash
 npm install
 ```
 
@@ -230,7 +230,7 @@ npm install
 
 [http://localhost:3000](http://localhost:3000) が Web ブラウザで開けば OK です。
 
-```bash
+```bash:bash
 # vite dev
 npm run dev
 ```
@@ -239,7 +239,7 @@ npm run dev
 
 ルート直下に vite.config.js を作成します。ここで大体カスタマイズできます。
 
-```js
+```js:vite.config.js
 import { defineConfig } from 'vite'
 
 export default defineConfig({
@@ -253,7 +253,7 @@ export default defineConfig({
 
 今回は Vite 上で React の Web アプリを製作するので `@vitejs/plugin-react` をインストールする必要があります。
 
-```bash
+```bash:bash
 # @vitejs/plugin-react
 npm install @vitejs/plugin-react
 yarn add @vitejs/plugin-react
@@ -261,7 +261,7 @@ yarn add @vitejs/plugin-react
 
 `plugins` プロパティで `@vitejs/plugin-react` を読み込みます。
 
-```js
+```js:vite.config.js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
@@ -284,7 +284,7 @@ Web ブラウザ上で挙動を確認するため HTTPS の環境にデプロイ
 
 その環境を構築するため、オレオレ証明書 (certificates) を生成する必要があります。
 
-```bash
+```bash:bash
 openssl req \
    -newkey rsa:2048 \
    -x509 \
@@ -310,10 +310,10 @@ openssl req \
 
 Node.js 標準で入っている fs の機能と合わせ Vite の [`server.https`](https://vitejs.dev/config/#server-https) を使うことで localhost で HTTPS な Web サーバを立てられます。
 
-```js
+```js:vite.config.js
 import { defineConfig } from 'vite'
 import fs from 'fs'
-
+...
 export default defineConfig({
   server: {
     https: {

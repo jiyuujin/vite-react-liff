@@ -14,7 +14,7 @@ title: "チャレンジ課題"
 
 `getProfile()` を利用してください。
 
-```tsx
+```tsx:src/pages/Top.tsx
 const [pictureUrl, setPictureUrl] = useState<string>('')
 liff
   .getProfile()
@@ -45,7 +45,7 @@ liff
 
 `sendMessages()` を利用してください。
 
-```tsx
+```tsx:src/pages/Top.tsx
 const sendMessages = async () => {
   await liffObject.sendMessages([
     {
@@ -63,7 +63,7 @@ const sendMessages = async () => {
 
 LINE アプリ上からアクセスされているかを返す `isInClient()` を利用してください。
 
-```tsx
+```tsx:src/pages/Top.tsx
 const sendMessages = async () => {
   const messages = [{ type: 'text', text: 'Hello World' }]
   liffObject.isInClient()

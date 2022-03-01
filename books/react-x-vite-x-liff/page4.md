@@ -17,7 +17,7 @@ Router の外側で LIFF の初期化を行った上で URL をデコードす�
 
 ### `Router` コンポーネントを作成する
 
-```tsx
+```tsx:src/routes/Router.tsx
 import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -38,7 +38,7 @@ export const Router = () => {
 
 遅延ロードも `Suspense` コンポーネントと合わせ、下記のように書けます。
 
-```tsx
+```tsx:src/routes/Router.tsx
 import React, { lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Loading } from '../components/Loading'
@@ -72,7 +72,7 @@ export const Router = () => {
 - これまでの React Router よりもコードをコンパクトに書きやすい 
 - バンドルサイズが減少する
 
-```tsx
+```tsx:src/routes/Router.tsx
 import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 
@@ -117,13 +117,13 @@ https://www.npmjs.com/package/@line/liff
 
 LINE Developers で作成した LIFF ID を `VITE_APP_LIFF_ID` に設定します。
 
-```.env
-VITE_APP_LIFF_ID=
+```shell:.env
+VITE_APP_LIFF_ID="YOUR_VITE_APP_LIFF_ID"
 ```
 
 これまで `process.env` で読み取っていた環境変数を ES Modules で読み取れるように `import.meta.env` に変更する必要があります。
 
-```js
+```js:vite.config.js
 const viteEnv = {}
 Object.keys(process.env).forEach((key) => {
   if (key.startsWith(`VITE_`)) {
@@ -151,31 +151,36 @@ Root に近い App コンポーネントで `liff.init()` を利用すること�
 
 ソースコードは下記の通りです。
 
-```tsx
-const [liffObject, setLiffObject] = useState<any>(null)
+```tsx:src/pages/Top.tsx
+import React, { useState, useEffect } from 'react'
+...
+const Top = () => {
+  const [liffObject, setLiffObject] = useState<any>(null)
 
-useEffect(() => {
-  import('@line/liff').then((liff: any) => {
-    liff
-      .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
-      .then(() => {
-        setLiffObject(liff)
-        if (liff.isLoggedIn()) {
-          // ログインの確認を取れたら
-        }
-      })
-      .catch((err: any) => {
-        console.error({ err })
-      })
-  })
-}, [])
+  useEffect(() => {
+    import('@line/liff').then((liff: any) => {
+      liff
+        .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
+        .then(() => {
+          setLiffObject(liff)
+          if (liff.isLoggedIn()) {
+            // ログインの確認を取れたら
+          }
+        })
+        .catch((err: any) => {
+          console.error({ err })
+        })
+    })
+  }, [])
+  ...
 ```
 
 また LIFF がちゃんと初期化できているかを判定してくれる API があります。
 
 `ready` とそれに伴うコールバック関数を利用してください。
+[公式ドキュメント](https://developers.line.biz/ja/reference/liff/#ready)
 
-```tsx
+```tsx:example
 useEffect(() => {
   liff.ready.then(() => {
     if (liff.isLoggedIn()) {
