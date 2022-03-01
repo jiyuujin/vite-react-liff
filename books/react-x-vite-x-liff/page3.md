@@ -17,6 +17,18 @@ title: "LINE API(LIFF)の設定"
 
 ![](/images/create-liff-project.png)
 
+### 新規チャネル作成
+
+下記の情報を登録し、`LINE の規約に同意` を選択し新規チャンネルを作成します
+```
+チャネルの種類: LINEログイン
+地域: 日本
+会社・事業者の所在国・地域: 日本
+チャネル名: Vite handson
+チャネル説明: Vite handson
+アプリタイプ: ウェブアプリ
+```
+
 ### LIFF の作成
 LINE Login のアカウントを作成したら、 `LIFF` > `ログイン` を選択し、LIFF の情報を記述していきます。
 
