@@ -289,9 +289,9 @@ openssl req \
    -newkey rsa:2048 \
    -x509 \
    -nodes \
-   -keyout localhost.key \
+   -keyout localhost-key.pem \
    -new \
-   -out localhost.crt \
+   -out localhost.pem \
    -subj /CN=localhost \
    -reqexts SAN \
    -extensions SAN \
@@ -303,10 +303,15 @@ openssl req \
 
 これをもってプロジェクトルート直下に下記 2 ファイルが生成されます。
 
-- localhost.crt
-- localhost.key
+- localhost.pem
+- localhost-key.pem
 
 新たに certificates ディレクトリを切ってそこに移動させます。
+
+```bash:bash
+mkdir certificates
+mv localhost-key.pem localhost.pem certificates
+```
 
 Node.js 標準で入っている fs の機能と合わせ Vite の [`server.https`](https://vitejs.dev/config/#server-https) を使うことで localhost で HTTPS な Web サーバを立てられます。
 
@@ -315,6 +320,7 @@ import { defineConfig } from 'vite'
 import fs from 'fs'
 ...
 export default defineConfig({
+  ...
   server: {
     https: {
       cert: fs.readFileSync('./certificates/localhost.pem'),
