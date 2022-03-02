@@ -48,6 +48,14 @@ Scope: ✅ profile ✅ すべてを表示 > chat_message.write
 作成した LIFF ID を public/index.html の LIFF_ID に登録します。
 LIFF URL は LINE のチャットに貼り付けます。
 
+また、以下のコマンドを実行して`.env`ファイルを作成します。
+
+```bash
+cp .env.tempate .env
+```
+
+`.env`ファイルの`VITE_APP_LIFF_ID`を更新します。
+
 ```shell:.env
 VITE_APP_FIREBASE_KEY="YOUR_VITE_APP_FIREBASE_KEY"
 VITE_APP_FIREBASE_DOMAIN="YOUR_VITE_APP_FIREBASE_DOMAIN"
