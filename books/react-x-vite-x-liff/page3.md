@@ -48,13 +48,19 @@ Scope: ✅ profile ✅ すべてを表示 > chat_message.write
 作成した LIFF ID を public/index.html の LIFF_ID に登録します。
 LIFF URL は LINE のチャットに貼り付けます。
 
-また、以下のコマンドを実行して`.env`ファイルを作成します。
+また、以下のコマンドを実行して `.env` ファイルを作成します。
 
 ```bash
 cp .env.tempate .env
 ```
 
-`.env`ファイルの`VITE_APP_LIFF_ID`を更新します。
+`.env` ファイルの `VITE_APP_LIFF_ID` を更新します。
+
+:::message
+
+なお、今回は Firebase を使いません。一番下 `VITE_APP_LIFF_ID` のみ上書き更新していただければ結構です。
+
+:::
 
 ```shell:.env
 VITE_APP_FIREBASE_KEY="YOUR_VITE_APP_FIREBASE_KEY"
@@ -69,6 +75,6 @@ VITE_APP_LIFF_ID="YOUR_VITE_APP_LIFF_ID" # => ここを上書きする
 
 LIFF を活用するために、以下の 2 つの設定が必要になる。
 - LIFF App を公開する。公開すると他の人もアンケートに答えられる。お試しの場合は開発モードでもテスト可能。
-- [シェアターゲットピッカー](https://developers.line.biz/ja/reference/liff/#share-target-picker)を有効にする
+- [`liff.shareTargetPicker()`](https://developers.line.biz/ja/reference/liff/#share-target-picker) を有効にする
 
 ![](/images/other-liff-settings.png)

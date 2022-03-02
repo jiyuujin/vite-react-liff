@@ -66,7 +66,7 @@ npm init vite
 yarn create vite
 ```
 
-オプションの例
+オプションの例を示します。
 
 ```bash
 ✔ Project name: … vite-project

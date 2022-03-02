@@ -333,3 +333,53 @@ export default defineConfig({
 最終的に `vite` を実行して HTTPS の Web サーバが起動することを確認してください。
 
 <!-- ファイル構成 -->
+
+## ファイル構成
+
+tree コマンドを利用して、ファイル構成を示します。
+
+```
+# tree -a -I "\.DS_Store|\.git|\.github|\.idea|articles|books|images|out|node_modules|vendor\/bundle" -N
+
+.
+├── .env
+├── certificates
+│    ├── localhost-key.pem
+│    └── localhost.pem
+├── package.json
+├── package-lock.json
+├── src
+│    ├── App.tsx
+│    ├── assets
+│    ├── components
+│    │    ├── Loading.tsx
+│    │    ├── Main.tsx
+│    │    ├── SendMessagesButton.tsx
+│    │    ├── SignInButton.tsx
+│    │    └── SignOutButton.tsx
+│    ├── contexts
+│    │    └── UserContext.tsx
+│    ├── index.css
+│    ├── index.html
+│    ├── main.tsx
+│    ├── pages
+│    │    ├── Error.tsx
+│    │    └── Top.tsx
+│    ├── routes
+│    │    └── Router.tsx
+│    └── vite-env.d.ts
+├── tsconfig.json
+├── vite.config.js
+└── yarn.lock
+```
+
+今回のポイントは下記 3 つ、ローカル環境で開発する場合は 4 つです。
+
+- TypeScript で書くため `tsconfig.json` が必要
+- Vite で設定をカスタマイズするため `vite.config.[j|t]s` が必要
+- LINE ユーザ情報を保持するため `src/contexts` が必要
+- (ローカル環境で開発する場合) オレオレ証明書 (`certificates`) が必要
+
+なお、 `src` 下のファイル構成は特異なものを採用していません。
+
+一般的に React や Vue などフロントエンドで用いられているファイル構成を採用しています。

@@ -37,9 +37,13 @@ https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1
 
 ### 今回のゴール
 
-今回は下記リポジトリで [Tailwind CSS](https://tailwindcss.com/) を利用してスタイルを装飾、またホスティングには [Firebase Hosting](https://firebase.google.com/docs/hosting) を利用している。
+今回のゴールとして LINE Front-end Framework を React (Vite) 上で使えることを目指します。
+
+特段 CSS による装飾は一切、行いません。
 
 https://github.com/jiyuujin/vite-react-liff
+
+なお、上記リポジトリで [Tailwind CSS](https://tailwindcss.com/) を利用してスタイルを装飾、またホスティングには [Firebase Hosting](https://firebase.google.com/docs/hosting) を利用しています。
 
 #### [`ver.2022.3.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.2)
 
