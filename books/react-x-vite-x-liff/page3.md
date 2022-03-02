@@ -72,10 +72,3 @@ LIFF を活用するために、以下の 2 つの設定が必要になる。
 - [シェアターゲットピッカー](https://developers.line.biz/ja/reference/liff/#share-target-picker)を有効にする
 
 ![](/images/other-liff-settings.png)
-
-
-<!-- firebase の設定 -->
-https://console.firebase.google.com/
-
-このプロジェクトで Google アナリティクスの有効化 → OFF にする
-→ 決定。
