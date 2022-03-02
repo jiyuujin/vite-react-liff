@@ -66,6 +66,14 @@ npm init vite
 yarn create vite
 ```
 
+オプションの例
+
+```bash
+✔ Project name: … vite-project
+✔ Select a framework: › react
+✔ Select a variant: › react-ts
+```
+
 ### 依存関係をインストールする
 
 :::message
