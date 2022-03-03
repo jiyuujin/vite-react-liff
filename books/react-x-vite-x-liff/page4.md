@@ -44,7 +44,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Loading } from '../components/Loading'
 
 const Top = lazy(() => import('../pages/Top'))
-const Error = lazy((() => import('../pages/Error'))
+const Error = lazy(() => import('../pages/Error'))
 
 export const Router = () => {
   return (
