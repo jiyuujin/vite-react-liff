@@ -351,12 +351,24 @@ const App = () => {
 
 ### `useState` の内側を理解する
 
+簡潔にいうと `useState` の内側では dispatcher の設定とそれに付随して蓄積された更新キューを順に実行しています。
+
+具体的にはブログの記事をご確認いただければ幸いです。
+
 https://webneko.dev/posts/deep-dive-react-usestate
 
 ### `useEffect` の内側を理解する
 
+簡潔にいうと `useEffect` の内側では、レンダリングのタイミングを考慮しながら、同じバッチでレンダリングするための更新キューを実行しています。
+
+具体的にはブログの記事をご確認いただければ幸いです。
+
 https://webneko.dev/posts/deep-dive-react-useeffect
 
 ### `useContext` の内側を理解する
+
+簡潔にいうと `useContext` の内側では `observedBits` の切り替えが肝となって Context 値を保持しています。
+
+具体的にはブログの記事をご確認いただければ幸いです。
 
 https://webneko.dev/posts/deep-dive-react-usecontext
