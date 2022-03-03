@@ -51,7 +51,7 @@ LIFF URL は LINE のチャットに貼り付けます。
 また、以下のコマンドを実行して `.env` ファイルを作成します。
 
 ```bash
-cp .env.tempate .env
+cp .env.example .env
 ```
 
 `.env` ファイルの `VITE_APP_LIFF_ID` を更新します。
