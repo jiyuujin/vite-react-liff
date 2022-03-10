@@ -8,3 +8,5 @@ out
 .idea
 
 .env
+
+__tests__/__snapshots__/**.snap
