@@ -9,5 +9,8 @@ module.exports = {
     ecmaFeatures: {
       jsx: true,
     }
+  },
+  rules: {
+    '@typescript-eslint/no-empty-function': 0
   }
 }
