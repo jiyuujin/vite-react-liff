@@ -2,18 +2,22 @@
 title: "環境構築"
 ---
 
-## Gitpod を利用する
+# 環境構築
 
-この度、開発環境として [Gitpod](https://www.gitpod.io/) を利用します。
+今回は [Gitpod](https://www.gitpod.io/) を利用します。
 
 ![](https://i.imgur.com/YwYpybr.jpg)
+
+## Gitpod とは
 
 いわゆる Web ブラウザで気軽に開発できる IDE (統合開発環境) です。
 
 Public リポジトリなら無料で利用でき Private リポジトリも [有料](https://www.gitpod.io/pricing/) で利用できる。
 
 :::message
-- 月の利用上限が 50 時間までです。
+
+月の利用上限が 50 時間までです。
+
 :::
 
 ### GitPod の拡張を導入する
