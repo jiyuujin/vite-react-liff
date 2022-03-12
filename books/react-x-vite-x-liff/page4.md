@@ -1,11 +1,17 @@
 ---
-title: "LINEログインをしよう"
+title: "LINE ログインをしよう"
 ---
 
 <!-- コーディング部分 -->
-<!-- もう一ページいるかも -->
 
-## SDK を使う前に
+# LINE ログイン
+
+2 ステップあります。順を追って、ゆっくり進めていきましょう。
+
+- SDK を導入する前に
+- SDK の導入を進める
+
+## SDK を導入する前に
 
 今回は [react-router](https://reactrouter.com/) を使った SPA アプリを例に取ります。
 
@@ -15,7 +21,9 @@ https://reactrouter.com/
 
 Router の外側で LIFF の初期化を行った上で URL をデコードするとルーティングされます。
 
-### `Router` コンポーネントを作成する
+## `Router` コンポーネントを作成する
+
+ルーティング用パスを管理するため `Router` コンポーネントを作成します。
 
 ```tsx:src/routes/Router.tsx
 import React from 'react'
@@ -99,7 +107,7 @@ export const Router = () => {
 
 :::
 
-## SDK をインストールする
+## SDK の導入を進める
 
 Web アプリケーション上で react-router を使う準備が整いました。
 
@@ -136,7 +144,7 @@ export default defineConfig({
 })
 ```
 
-### LINE ログイン
+### ログイン API を実行する
 
 Root に近い App コンポーネントで `liff.init()` を利用することで LIFF を初期化します。
 

@@ -1,12 +1,15 @@
 ---
-title: "LINE API(LIFF)の設定"
+title: "LINE API (LIFF) の設定"
 ---
 
-## LINE の設定
+# LINE API (LIFF) の設定
 
 [LINE Developers](https://developers.line.biz/console/) から LINE の設定をしていきます。
 
-## 初回利用の方は新規プロバイダーの登録をしてください
+## 初めて利用されるという方は
+
+新規プロバイダーの登録より進めてください。
+
 :::details LINE Developer の登録(初回利用の方のみ)
 [#Messaging APIを始めよう](https://developers.line.biz/ja/docs/messaging-api/getting-started/) を参考に 3. まで進めてください。
 
@@ -31,6 +34,7 @@ title: "LINE API(LIFF)の設定"
 ```
 
 ### LIFF の作成
+
 LINE Login のアカウントを作成したら、 `LIFF` > `ログイン` を選択し、LIFF の情報を記述していきます。
 
 ```text
