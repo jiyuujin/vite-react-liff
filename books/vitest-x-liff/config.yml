@@ -1,0 +1,23 @@
+title: "Vitest でテストを書こう"
+summary:
+  React Tutorial から一歩踏み出してみたい人 / フロントに興味があり、テストを書いてみたい人へ
+
+  React コンポーネントや、LINE API と連携して、モックのテストなどを解説していきます。
+
+topics: ["zenn", "vitest", "liff", "line", "mock"] # 5 つまで
+published: false # 下書きは false
+price: 0
+chapters:
+  - page1
+    # 今回のゴールを説明する
+  # 軽い vitest の用語の説明をしたい
+  - page2
+    # 環境構築: gitpod / vitest
+  # Goal: コンポーネントのテストを書けるまで
+  - page3
+    # testing-library を利用
+  # Goal: モックのテストを書けるまで
+  - page4
+    # モックを利用
+  - page5
+  # 謝辞
