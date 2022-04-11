@@ -36,7 +36,7 @@ type AuthContextProps = {
 
 export const AuthContext = createContext<AuthContextProps>({
   state: { state: 'UNKNOWN' },
-  dispatch: (val) => {
+  dispatch: () => {
     //
   },
 })

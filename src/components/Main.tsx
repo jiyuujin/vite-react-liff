@@ -20,6 +20,7 @@ export const Main = () => {
         signOut()
       }
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
