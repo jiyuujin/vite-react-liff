@@ -3,7 +3,8 @@ title: 'LIFF アプリを React 18 (Vite) で動作させよう'
 emoji: '👱🏻‍♀️'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['zenn', 'vite', 'react', 'liff', 'line'] # 5 つまで
-published: false # 下書きは false
+publish-on: 2022-04-11
+published: true # 下書きは false
 ---
 
 # 前置き
