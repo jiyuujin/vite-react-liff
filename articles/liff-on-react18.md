@@ -19,7 +19,7 @@ https://zenn.dev/jiyuujin/books/react-x-vite-x-liff
 
 ハンズオンではビルドツール [Vite](https://ja.vitejs.dev/) を利用して LIFF アプリを製作しました。
 
-代わりに [Next.js](https://nextjs.org/) を利用して LIFF アプリを製作するために、何に対して注意するべきか書かせていただきます。
+今回は、正式リリースされた [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html) を下に、先日製作した LIFF アプリを React 18 上でも動作させるために、何に対して注意するべきか書かせていただきます。
 
 ## React 18 リリース
 
