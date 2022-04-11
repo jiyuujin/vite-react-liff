@@ -106,3 +106,52 @@ yarn dev
 |Gitpod|Localhost|
 |:---|:---|
 |![](https://i.imgur.com/rR5fo2C.jpg)|![](https://i.imgur.com/iUANZzJ.jpg)|
+
+### `src/main.tsx` を理解する
+
+Web アプリケーションのルートで `src/main.tsx` を読み込みます。
+
+ここで React 18 とそれ以前で書くべきコードに変更点が存在します。
+
+:::message
+
+React 18 について 3 月 30 日に React 本体が、遅れて 4 月 7 日に型定義ファイルもリリースされています。
+
+:::
+
+#### React 18 では
+
+`react-dom/client` の `createRoot` という API を使います。
+
+```tsx:src/main.tsx
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App'
+
+const container = document.getElementById('root')
+if (!container) throw new Error('Failed to find the root element')
+createRoot(container).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
+#### React 17 まで
+
+`react-dom` の `render` という API を使います。
+
+```tsx:src/main.tsx
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import App from './App'
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById('root')
+)
+```

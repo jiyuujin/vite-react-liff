@@ -6,8 +6,8 @@
     "build": "vite build",
     "eslint": "eslint ./ --ext ts,tsx",
     "eslint:fix": "eslint ./ --ext ts,tsx --fix",
-    "textlint": "textlint ./books/**",
-    "textlint:fix": "textlint ./books/** --fix",
+    "textlint": "textlint ./articles/** ./books/**",
+    "textlint:fix": "textlint ./articles/** ./books/** --fix",
     "book": "zenn preview"
   },
   "dependencies": {
