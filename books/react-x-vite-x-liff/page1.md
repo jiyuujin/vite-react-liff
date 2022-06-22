@@ -45,7 +45,7 @@ https://github.com/jiyuujin/vite-react-liff
 
 なお、上記リポジトリで [Tailwind CSS](https://tailwindcss.com/) を利用してスタイルを装飾、またホスティングには [Firebase Hosting](https://firebase.google.com/docs/hosting) を利用しています。
 
-#### [`ver.2022.4` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4)
+#### [`ver.2022.4.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4.1)
 
 React 18 に対応している。
 
@@ -57,11 +57,11 @@ React 18 に対応している。
 
 LIFF ブラウザでメッセージを送信する。
 
-#### [`ver.2022.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.2)
+#### [`ver.2022.2.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.2.1)
 
 LINE ログイン時にアイコン画像を表示している。
 
-#### [`ver.2022.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.1)
+#### [`ver.2022.1.1` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.1.1)
 
 LINE Front-end Framework を利用して LINE 認証を実装している。
 
