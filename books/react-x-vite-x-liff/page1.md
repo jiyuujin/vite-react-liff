@@ -45,6 +45,10 @@ https://github.com/jiyuujin/vite-react-liff
 
 なお、上記リポジトリで [Tailwind CSS](https://tailwindcss.com/) を利用してスタイルを装飾、またホスティングには [Firebase Hosting](https://firebase.google.com/docs/hosting) を利用しています。
 
+#### [`ver.2022.4` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4)
+
+React 18 に対応している。
+
 #### [`ver.2022.3.2` branch](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.3.2)
 
 `shareTargetPicker` を利用して外部ブラウザで LINE にメッセージを送信する。

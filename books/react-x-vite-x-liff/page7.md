@@ -2,18 +2,21 @@
 title: "LIFF について"
 ---
 
-## LIFF とは
+# LIFF とは
 
 > LINE Front-end Framework（LIFF）は、LINE が提供するウェブアプリのプラットフォームです。このプラットフォームで動作するウェブアプリを、LIFF アプリと呼びます。
 
 公式：[ドキュメント > LINE Front-end Framework > LINE Front-end Framework](https://developers.line.biz/ja/docs/liff/overview/)
 
-- ブラウザで LINE の機能が使えるフレームワークです。
-  - ユーザー情報
-  - OS / 言語情報等
-  - Bot との友達情報
-  - メッセージ送信（LIFF ブラウザのみ）
-  - QR スキャン（LIFF ブラウザのみ）
+ブラウザで LINE の機能が使えるフレームワークになります。
+
+以下のようなことを実現できます。
+
+- ユーザー情報
+- OS / 言語情報等
+- Bot との友達情報
+- メッセージ送信（LIFF ブラウザのみ）
+- QR スキャン（LIFF ブラウザのみ）
 
 ## API について
 

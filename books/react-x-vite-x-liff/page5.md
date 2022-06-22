@@ -255,8 +255,8 @@ export default defineConfig({
 
 ```bash:bash
 # @vitejs/plugin-react
-npm install @vitejs/plugin-react
-yarn add @vitejs/plugin-react
+npm i -D @vitejs/plugin-react
+yarn add -D @vitejs/plugin-react
 ```
 
 `plugins` プロパティで `@vitejs/plugin-react` を読み込みます。
