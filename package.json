@@ -29,12 +29,9 @@
     "eslint": "^8.13.0",
     "tailwindcss": "^3.0.23",
     "textlint": "^12.1.0",
-    "textlint-rule-ja-no-space-around-parentheses": "^2.2.0",
-    "textlint-rule-ja-no-space-between-full-width": "^2.2.0",
-    "textlint-rule-ja-space-around-code": "^2.2.0",
     "textlint-rule-no-mix-dearu-desumasu": "^5.0.0",
-    "textlint-rule-preset-ja-spacing": "^2.2.0",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
+    "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "typescript": "^4.6.3",
     "vite": "^2.9.1"
