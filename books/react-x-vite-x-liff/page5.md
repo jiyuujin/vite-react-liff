@@ -4,7 +4,7 @@ title: "Vite について"
 
 # Vite とは
 
-Vue の作者である Evan You 氏が中心となって開発されているビルドツールで、なお Vite を「ヴィート」と読んでください。
+Vue の作者 Evan You 氏が中心となって開発されているビルドツールで、なお Vite を「ヴィート」と読んでください。
 
 https://vitejs.dev/
 

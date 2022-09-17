@@ -11,7 +11,7 @@ title: "React hooks について"
 - [Vue](https://jp.vuejs.org/index.html) / [Vue 3](https://v3.vuejs.org/)
 - [Svelte](https://svelte.jp/)
 
-React の主な特徴に仮想 DOM や宣言的 UI が挙げられます。これは奇しくも同じ JavaScript のフレームワークのひとつである Vue と共通する特徴で、この公式ドキュメントで React の触りが記載されており、こちらも合わせチェックいただければ幸いです。
+React の主な特徴に仮想 DOM や宣言的 UI が挙げられます。これは奇しくも同じ JavaScript のフレームワークのひとつ Vue と共通する特徴で、この公式ドキュメントで React の触りが記載されており、こちらも合わせチェックいただければ幸いです。
 
 https://jp.vuejs.org/v2/guide/comparison.html
 
@@ -28,7 +28,7 @@ state に対応する view を作成したり、上に指し示した state と 
 
 :::message
 
-「React が宣言的である (Declarative)」と言う話は @sonatard さんの [宣言的 UI](https://speakerdeck.com/sonatard/xuan-yan-de-ui) で分かり易く解説されています。
+「`React が宣言的である (Declarative)`」と言う話は @sonatard さんの [宣言的 UI](https://speakerdeck.com/sonatard/xuan-yan-de-ui) で分かり易く解説されています。
 
 :::
 
@@ -234,7 +234,7 @@ const [count, setCount] = useState(0)
 
 ひと昔前に書いていたクラスコンポーネントで指し示すところの `componentDidMount` と `componentDidUpdate` を組み合わせたようなものを想像してください。
 
-実際に元の `useEffect` フックと同様のコールバック関数と依存関係の配列を受け入れます。第 2 引数である依存関係の配列に何も渡されないと、コンポーネントの初期レンダリング時に実行されます。
+実際に元の `useEffect` フックと同様のコールバック関数と依存関係の配列を受け入れます。第 2 引数の依存関係配列に何も渡されないと、コンポーネントの初期レンダリング時に実行されます。
 
 主に下記ケースで `useEffect` を使うことが多い。
 
