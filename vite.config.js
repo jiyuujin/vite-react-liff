@@ -21,6 +21,10 @@ export default ({ mode }) => {
         cert: fs.readFileSync('./certificates/localhost.pem'),
         key: fs.readFileSync('./certificates/localhost-key.pem')
       }
+    },
+    test: {
+      global: true,
+      environment: 'jsdom'
     }
   })
 }
