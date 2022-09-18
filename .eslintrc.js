@@ -11,6 +11,7 @@ module.exports = {
     }
   },
   rules: {
-    '@typescript-eslint/no-explicit-any': 0
+    '@typescript-eslint/no-explicit-any': 0,
+    '@typescript-eslint/no-empty-function': 0
   }
 }
