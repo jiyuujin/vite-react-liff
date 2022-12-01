@@ -14,33 +14,33 @@
     "book": "zenn preview"
   },
   "dependencies": {
-    "@line/liff": "^2.18.1",
-    "firebase": "^9.6.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-router-dom": "^6.3.0",
-    "zenn-cli": "^0.1.103"
+    "@line/liff": "^2.21.3",
+    "firebase": "^9.14.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "zenn-cli": "^0.1.132"
   },
   "devDependencies": {
-    "@nekohack/eslint-config-react": "^0.5.0",
+    "@nekohack/eslint-config-react": "^0.10.0",
     "@testing-library/react": "^13.4.0",
-    "@types/react": "^18.0.1",
-    "@types/react-dom": "^18.0.0",
-    "@typescript-eslint/eslint-plugin": "^5.18.0",
-    "@typescript-eslint/parser": "^5.18.0",
-    "@vitejs/plugin-react": "^1.3.0",
-    "autoprefixer": "^10.4.4",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vitejs/plugin-react": "^2.2.0",
+    "autoprefixer": "^10.4.13",
     "c8": "^7.12.0",
-    "eslint": "^8.13.0",
-    "jsdom": "^20.0.0",
-    "tailwindcss": "^3.0.23",
-    "textlint": "^12.1.0",
+    "eslint": "^8.28.0",
+    "jsdom": "^20.0.3",
+    "tailwindcss": "^3.2.4",
+    "textlint": "^12.2.3",
     "textlint-rule-no-mix-dearu-desumasu": "^5.0.0",
     "textlint-rule-preset-ja-technical-writing": "^7.0.0",
     "textlint-rule-preset-nekohack-inc": "git+https://github.com/nekohack/textlint-rule-preset-nekohack-inc.git",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "typescript": "^4.6.3",
-    "vite": "^2.9.1",
-    "vitest": "^0.23.2"
+    "typescript": "^4.9.3",
+    "vite": "^3.2.4",
+    "vitest": "^0.25.3"
   }
 }
