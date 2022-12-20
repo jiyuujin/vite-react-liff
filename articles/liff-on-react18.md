@@ -31,7 +31,7 @@ https://github.com/DefinitelyTyped/DefinitelyTyped/pull/56210
 
 ですが React 18 でも問題なく動作することを確認しております。
 
-### 注意するべきこと
+## React 18 で注意するべきこと
 
 React 18 に更新する際、その変更差分は大きくないものの、いくつか気を付けたいことがあります。
 
@@ -48,7 +48,7 @@ React 18 に更新する際、その変更差分は大きくないものの、�
 
 https://webneko.dev/posts/migrate-to-react-18
 
-#### `createRoot` への仕様変更
+### `createRoot` への仕様変更
 
 Root DOM 作成 API に変更がありました。
 
@@ -61,7 +61,7 @@ https://github.com/jiyuujin/vite-react-liff/commit/e84f175a38b119ab21eb165ee0faa
 
 Web アプリケーションのルートで `src/main.tsx` を読み込んでいるでしょうけれど、この変更点は大きいので注意していただければ幸いです。
 
-#### 暗黙的なコンポーネントにおける Children の扱い
+### 暗黙的なコンポーネントにおける Children の扱い
 
 Children を実装しているものの、下記暗黙の宣言に依存しているコンポーネントについて、削除される破壊的変更があり注意しなければいけません。
 
@@ -87,7 +87,7 @@ const SomeFunctionComponent: React.FunctionComponent<Props> = props => <div>{pro
 
 https://github.com/eps1lon/types-react-codemod
 
-#### `useEffect` hook 周辺の挙動に留意
+### `useEffect` hook 周辺の挙動に留意
 
 StrictMode を取り入れる動機が、コンポーネントをアンマウントする代わりに、状態を保持することを可能にするため。
 
