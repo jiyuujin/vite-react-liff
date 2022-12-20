@@ -1,5 +1,5 @@
 ---
-title: 'LIFF アプリを React 18 (Vite) で動作させよう'
+title: 'LIFF アプリを React 18 (Vite) で書いてみよう'
 emoji: '👱🏻‍♀️'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['zenn', 'vite', 'react', 'liff', 'line'] # 5 つまで
@@ -135,4 +135,4 @@ LIFF アプリとして動かすにあたり、上記以外の点について特
 
 Zenn book の [教材](https://zenn.dev/jiyuujin/books/react-x-vite-x-liff) と合わせ、いま一度ご確認いただきますと良いものと考えています。
 
-https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4
+https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4.1
