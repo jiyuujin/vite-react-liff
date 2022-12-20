@@ -1,5 +1,5 @@
 ---
-title: 'Vite 4 とは'
+title: 'LIFF アプリを Vite 4 (React 18) で動かしてみよう'
 emoji: '🐷'
 type: 'tech' # tech: 技術記事 / idea: アイデア
 topics: ['zenn', 'vite', 'react', 'liff', 'line'] # 5 つまで
@@ -18,7 +18,7 @@ https://zenn.dev/jiyuujin/books/react-x-vite-x-liff
 
 ハンズオンではビルドツール [Vite](https://ja.vitejs.dev/) を利用して LIFF アプリを製作しました。
 
-今回は、正式リリースされた [React 18](https://reactjs.org/blog/2022/03/29/react-v18.html) を下に、先日製作した LIFF アプリを React 18 上でも動作させるために、何に対して注意するべきか書かせていただきます。
+今回は、正式リリースされた [Vite 4](https://vitejs.dev/blog/announcing-vite4.html) を下に、先日製作した LIFF アプリを Vite 4 上でも動作させるために、何に対して注意するべきか書かせていただきます。
 
 ## Vite の 3 と 4 リリース
 
@@ -45,7 +45,7 @@ Vite 2 から Vite 3 へ移行する際は、下に示したことへ注意す�
 - モダンブラウザ基準の変更
 - 設定オプションの変更
 - 開発サーバの変更
-- `import.meta.glob`
+- glob インポートでの形式変換
 - WebAssembly サポート
 
 ### モダンブラウザ基準の変更
@@ -73,15 +73,13 @@ v2 にて非推奨となっていた以下のオプションは削除されま�
 
 ### 開発サーバの変更
 
-Vite の開発サーバのデフォルトポートが 5173 に変更されました。
+Vite の開発サーバのデフォルトポートが `5173` に変更されました。
 
 [`server.port`](https://ja.vitejs.dev/config/server-options.html#server-port) を利用することで 3000 に変更できます。
 
-### `import.meta.glob`
+### glob インポートでの形式変換
 
-[raw での `import.meta.glob`](https://ja.vitejs.dev/guide/features.html#glob-%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A7%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%AE%E5%A4%89%E6%8F%9B) は、記法が `{ assert: { type: 'raw' }}` から `{ as: 'raw' }` に変更されました。
-
-`import.meta.glob` のキーは現在のモジュールから相対的になりました。
+[glob インポートでの形式変換](https://ja.vitejs.dev/guide/features.html#glob-%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88%E3%81%A7%E3%81%AE%E5%BD%A2%E5%BC%8F%E3%81%AE%E5%A4%89%E6%8F%9B) は、記法が `{ assert: { type: 'raw' }}` から `{ as: 'raw' }` に変更されました。
 
 ```js
 // ファイル: /foo/index.js
@@ -94,11 +92,13 @@ const modules = {
 }
 ```
 
+このように `import.meta.glob` は、現在のモジュールから相対的になっています。
+
 ### WebAssembly サポート
 
 `import init from 'example.wasm'` の記法は、[WebAssembly の ES モジュール統合の提案](https://github.com/WebAssembly/esm-integration) との将来的な衝突を避けるため、廃止されました。
 
-以前の挙動に似た `?init` を利用できます。
+実際に、以前の挙動に似た `?init` を利用できます。
 
 ```js
 -import init from 'example.wasm'
@@ -125,6 +125,12 @@ Vite 3 から Vite 4 へ移行する際は、下に示したことへ注意す�
 内部的に Rollup 3 を使っています。
 
 https://github.com/rollup/rollup/releases/tag/v3.0.0
+
+::: message
+
+この更新に伴い、Node.js 14.18.0 が必須となっています。
+
+:::
 
 ### 開発中に SWC を使用する新しい React プラグイン
 
@@ -154,7 +160,7 @@ import stuff from './global.css?inline'
 
 `dotenv` 16 と `dotenv-expand` 9 (以前は `dotenv` 14 と `dotenv-expand` 5) を使用するようになりました。
 
-Vite 4 では、引用符 `"` を設定する必要があります。
+新たに、引用符 `"` を設定する必要があります。
 
 ```.env
 # NG
@@ -166,8 +172,12 @@ Vite 4 では、引用符 `"` を設定する必要があります。
 
 ## 最後に
 
-LINE front-end framework を利用したリポジトリにおいては、あまり Vite の変更によって影響を受ける部分は少ないように考えています。
+アプリを製作する側にとって Vite の変更によって影響を受ける部分は、ソースコードを見ている限り、あまり少ないものと考えています。
 
-https://github.com/jiyuujin/vite-react-liff
+なお、以下リポジトリで Vite 4 に対応しています。
+
+Zenn book の [教材](https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4.2) と合わせ、いま一度ご確認いただきますと良いものと考えています。
+
+https://github.com/jiyuujin/vite-react-liff/tree/ver.2022.4.2
 
 来年 2023 年も、フロントエンドにおけるビルドツールの一角として Vite の動向を注視したいと考えています。
