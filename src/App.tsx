@@ -1,32 +1,15 @@
-import React, { useEffect } from 'react'
-import { getAuth, onAuthStateChanged } from '@firebase/auth'
-import { setupFirebase } from './plugins/firebase'
-import { AuthProvider, useSignIn, useSignOut } from './contexts/UserContext'
+import React from 'react'
 import { Main } from './components/Main'
+import { useFirebase } from './hooks/useFirebase'
+import { JoinFirebase } from './components/JoinFirebase'
 
 const App = () => {
-  const { signIn } = useSignIn()
-  const { signOut } = useSignOut()
-
-  useEffect(() => {
-    setupFirebase()
-
-    const auth = getAuth()
-
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        signIn(user)
-      } else {
-        signOut()
-      }
-    })
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  useFirebase()
 
   return (
-    <AuthProvider>
+    <JoinFirebase>
       <Main />
-    </AuthProvider>
+    </JoinFirebase>
   )
 }
 
