@@ -2,9 +2,11 @@ import React from 'react'
 import { useLine } from '../hooks/useLine'
 import { useLineInfo } from '../hooks/useLineInfo'
 import { useLineMessage } from '../hooks/useLineMessage'
+import { useChatForm } from '../hooks/useChatForm'
 import { SignOutButton } from '../components/SignOutButton'
 import { SignInButton } from '../components/SignInButton'
 import { SendMessagesButton } from '../components/SendMessagesButton'
+import { ChatInput } from '../components/ChatInput'
 
 const Top = () => {
   const { liffObject, status, login, logout } = useLine()
@@ -16,6 +18,7 @@ const Top = () => {
     status,
   })
   const { sendMessages } = useLineMessage({ liff: liffObject, status })
+  const { answer, search } = useChatForm()
 
   if (status !== 'inited') {
     return (
@@ -50,6 +53,10 @@ const Top = () => {
             </h2>
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               <SendMessagesButton sendMessages={sendMessages} />
+            </h2>
+            <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
+              {answer}
+              <ChatInput onSearch={search} />
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">

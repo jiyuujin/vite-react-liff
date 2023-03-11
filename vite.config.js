@@ -1,5 +1,6 @@
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
+import svgr from 'vite-plugin-svgr'
 import fs from 'fs'
 
 export default ({ mode }) => {
@@ -15,7 +16,7 @@ export default ({ mode }) => {
       outDir: '../out',
       emptyOutDir: true
     },
-    plugins: [react()],
+    plugins: [react(), svgr()],
     server: {
       https: {
         cert: fs.readFileSync('./certificates/localhost.pem'),
