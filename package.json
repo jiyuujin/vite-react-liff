@@ -41,6 +41,7 @@
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
     "typescript": "^4.9.4",
     "vite": "^4.0.2",
+    "vite-plugin-svgr": "^2.4.0",
     "vitest": "^0.26.0"
   }
 }
