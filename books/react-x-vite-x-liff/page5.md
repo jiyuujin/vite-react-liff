@@ -377,7 +377,7 @@ tree コマンドを利用して、ファイル構成を示します。
 
 - TypeScript で書くため `tsconfig.json` が必要
 - Vite で設定をカスタマイズするため `vite.config.[j|t]s` が必要
-- LINE ユーザ情報を保持するため `src/contexts` が必要
+- (Google 認証する場合) Firebase ユーザ情報を保持するため `src/contexts` が必要
 - (ローカル環境で開発する場合) オレオレ証明書 (`certificates`) が必要
 
 なお、 `src` 下のファイル構成は特異なものを採用していません。

@@ -355,7 +355,7 @@ const App = () => {
 
 具体的にはブログの記事をご確認いただければ幸いです。
 
-https://webneko.dev/posts/deep-dive-react-usestate
+https://blog.nekohack.me/posts/deep-dive-react-usestate
 
 ### `useEffect` の内側を理解する
 
@@ -363,7 +363,7 @@ https://webneko.dev/posts/deep-dive-react-usestate
 
 具体的にはブログの記事をご確認いただければ幸いです。
 
-https://webneko.dev/posts/deep-dive-react-useeffect
+https://blog.nekohack.me/posts/deep-dive-react-useeffect
 
 ### `useContext` の内側を理解する
 
@@ -371,4 +371,4 @@ https://webneko.dev/posts/deep-dive-react-useeffect
 
 具体的にはブログの記事をご確認いただければ幸いです。
 
-https://webneko.dev/posts/deep-dive-react-usecontext
+https://blog.nekohack.me/posts/deep-dive-react-usecontext

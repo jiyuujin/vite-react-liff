@@ -46,7 +46,7 @@ React 18 に更新する際、その変更差分は大きくないものの、�
 
 なお、新機能については別途ブログに書かせていただいております。
 
-https://webneko.dev/posts/migrate-to-react-18
+https://blog.nekohack.me/posts/migrate-to-react-18
 
 ### `createRoot` への仕様変更
 

@@ -111,17 +111,7 @@ yarn dev
 
 Web アプリケーションのルートで `src/main.tsx` を読み込みます。
 
-ここで React 18 とそれ以前で書くべきコードに変更点が存在します。
-
-:::message
-
-React 18 について 3 月 30 日に React 本体が、遅れて 4 月 7 日に型定義ファイルもリリースされています。
-
-:::
-
-#### React 18 では
-
-`react-dom/client` の `createRoot` という API を使います。
+`react-dom` の `render` という API を使います。
 
 ```tsx:src/main.tsx
 import React from 'react'
@@ -138,11 +128,30 @@ createRoot(container).render(
 )
 ```
 
-#### React 17 まで
+:::details React v17 と比較する。
 
-`react-dom` の `render` という API を使います。
+ここで React 18 とそれ以前で書くべきコードに変更点が存在します。React 18 では `react-dom/client` の `createRoot` という API を使います。
 
 ```tsx:src/main.tsx
+// React 18
+
+import React from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App'
+
+const container = document.getElementById('root')
+if (!container) throw new Error('Failed to find the root element')
+createRoot(container).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+)
+```
+
+```tsx:src/main.tsx
+// React 17
+
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
@@ -155,3 +164,7 @@ ReactDOM.render(
   document.getElementById('root')
 )
 ```
+
+なお、この React 18 について 3 月 30 日に React 本体が、遅れて 4 月 7 日に型定義ファイルもリリースされています。
+
+:::
