@@ -1,8 +1,10 @@
 import React from 'react'
+import { useAudioRecorder } from 'react-audio-voice-recorder'
 import { useLine } from '../hooks/useLine'
 import { useLineInfo } from '../hooks/useLineInfo'
 import { useLineMessage } from '../hooks/useLineMessage'
 import { useChatForm } from '../hooks/useChatForm'
+import { useAudioWhisper } from '../hooks/useAudioWhisper'
 import { SignOutButton } from '../components/SignOutButton'
 import { SignInButton } from '../components/SignInButton'
 import { SendMessagesButton } from '../components/SendMessagesButton'
@@ -18,7 +20,10 @@ const Top = () => {
     status,
   })
   const { sendMessages } = useLineMessage({ liff: liffObject, status })
-  const { answer, search } = useChatForm()
+  const { answer: chatAnswer, search } = useChatForm()
+  const { startRecording, stopRecording, isRecording, recordingBlob } =
+    useAudioRecorder()
+  const { answer: whisperAnswer } = useAudioWhisper({ blob: recordingBlob })
 
   if (status !== 'inited') {
     return (
@@ -55,8 +60,16 @@ const Top = () => {
               <SendMessagesButton sendMessages={sendMessages} />
             </h2>
             <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
-              {answer}
+              {chatAnswer}
               <ChatInput onSearch={search} />
+            </h2>
+            <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
+              {whisperAnswer}
+              {isRecording ? (
+                <button onClick={stopRecording}>Stop recording</button>
+              ) : (
+                <button onClick={startRecording}>Start recording</button>
+              )}
             </h2>
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
