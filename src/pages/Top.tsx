@@ -3,10 +3,13 @@ import { useLine } from '../hooks/useLine'
 import { useLineInfo } from '../hooks/useLineInfo'
 import { useLineMessage } from '../hooks/useLineMessage'
 import { useChatForm } from '../hooks/useChatForm'
+import { useRecorderForm } from '../hooks/useRecorderForm'
 import { SignOutButton } from '../components/SignOutButton'
 import { SignInButton } from '../components/SignInButton'
 import { SendMessagesButton } from '../components/SendMessagesButton'
 import { ChatInput } from '../components/ChatInput'
+import { Recorder } from '../components/Recorder'
+import { RECORDING } from '../utils/features'
 
 const Top = () => {
   const { liffObject, status, login, logout } = useLine()
@@ -19,6 +22,11 @@ const Top = () => {
   })
   const { sendMessages } = useLineMessage({ liff: liffObject, status })
   const { answer, search } = useChatForm()
+  const { setBlob } = useRecorderForm()
+
+  const updateBlob = (blob: Blob | undefined) => {
+    setBlob(blob)
+  }
 
   if (status !== 'inited') {
     return (
@@ -58,6 +66,11 @@ const Top = () => {
               {answer}
               <ChatInput onSearch={search} />
             </h2>
+            {RECORDING && (
+              <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
+                <Recorder onEnd={updateBlob} />
+              </h2>
+            )}
           </div>
           <form className="mt-8 space-y-6" action="#" method="POST">
             <div>{`${displayName} (${version})`}</div>
