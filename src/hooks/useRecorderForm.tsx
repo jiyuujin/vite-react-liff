@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 export const useRecorderForm = () => {
-  const [blob, setBlob] = useState<Blob>()
+  const [_, setBlob] = useState<Blob>()
 
-  return { blob, setBlob }
+  return { setBlob }
 }
