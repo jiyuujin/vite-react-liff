@@ -9,7 +9,7 @@ import { SignInButton } from '../components/SignInButton'
 import { SendMessagesButton } from '../components/SendMessagesButton'
 import { ChatInput } from '../components/ChatInput'
 import { Recorder } from '../components/Recorder'
-import { RECORDING } from '../utils/features'
+import { CHATGPT, RECORDING } from '../utils/features'
 
 const Top = () => {
   const { liffObject, status, login, logout } = useLine()
@@ -62,10 +62,12 @@ const Top = () => {
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               <SendMessagesButton sendMessages={sendMessages} />
             </h2>
-            <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
-              {answer}
-              <ChatInput onSearch={search} />
-            </h2>
+            {CHATGPT && (
+              <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
+                {answer}
+                <ChatInput onSearch={search} />
+              </h2>
+            )}
             {RECORDING && (
               <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
                 <Recorder onEnd={updateBlob} />
