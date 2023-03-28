@@ -10,7 +10,7 @@ import { SendMessagesButton } from '../components/SendMessagesButton'
 import { ChatInput } from '../components/ChatInput'
 import { useFirebase } from '../hooks/useFirebase'
 import { Recorder } from '../components/Recorder'
-import { RECORDING } from '../utils/features'
+import { CHATGPT, RECORDING } from '../utils/features'
 
 const FireTop = () => {
   const { login: loginFirebase, logout: logoutFirebase } = useFirebase()
@@ -79,10 +79,12 @@ const FireTop = () => {
             <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
               <SendMessagesButton sendMessages={sendMessages} />
             </h2>
-            <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
-              {answer}
-              <ChatInput onSearch={search} />
-            </h2>
+            {CHATGPT && (
+              <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
+                {answer}
+                <ChatInput onSearch={search} />
+              </h2>
+            )}
             {RECORDING && (
               <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
                 <Recorder onEnd={updateBlob} />
