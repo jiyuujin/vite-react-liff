@@ -8,9 +8,7 @@ export interface Message {
 }
 
 export const useChatCompletion = () => {
-  const fetchCompletions = async (
-    messages: Message[]
-  ): Promise<Message | undefined> => {
+  const request = async (messages: Message[]): Promise<Message | undefined> => {
     const body = JSON.stringify({
       model: 'gpt-3.5-turbo',
       messages,
@@ -29,5 +27,5 @@ export const useChatCompletion = () => {
     return data.choices[0].message
   }
 
-  return { fetchCompletions }
+  return { request }
 }

@@ -3,15 +3,15 @@ import { useChatCompletion } from './useChatCompletion'
 
 export const useChatForm = () => {
   const [answer, setAnswer] = useState('')
-  const { fetchCompletions } = useChatCompletion()
+  const { request } = useChatCompletion()
 
-  const search = async (input: string) => {
+  const onSubmit = async (input: string) => {
     if (!input) {
       alert('Please input something.')
       return
     }
 
-    const res = await fetchCompletions([
+    const res = await request([
       {
         role: 'user',
         content: input,
@@ -20,5 +20,5 @@ export const useChatForm = () => {
     setAnswer(res?.content || '')
   }
 
-  return { answer, search }
+  return { answer, onSubmit }
 }

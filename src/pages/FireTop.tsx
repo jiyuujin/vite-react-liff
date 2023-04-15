@@ -28,7 +28,7 @@ const FireTop = () => {
     status,
   })
   const { sendMessages } = useLineMessage({ liff: liffObject, status })
-  const { answer, search } = useChatForm()
+  const { answer, onSubmit } = useChatForm()
   const { setBlob } = useRecorderForm()
 
   const updateBlob = (_blob: Blob | undefined) => {
@@ -82,7 +82,7 @@ const FireTop = () => {
             {CHATGPT && (
               <h2 className="grid gap-2 mt-6 text-center text-3xl font-extrabold text-gray-900">
                 {answer}
-                <ChatInput onSearch={search} />
+                <ChatInput onSearch={onSubmit} />
               </h2>
             )}
             {RECORDING && (
