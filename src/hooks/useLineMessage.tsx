@@ -1,4 +1,4 @@
-import { assertData } from '../utils/assetData'
+import { assertData } from '../utils/assertData'
 import { Status } from './useLine'
 
 interface UseLineMessageProps {

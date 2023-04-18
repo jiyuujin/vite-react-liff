@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { assertData } from '../utils/assetData'
+import { assertData } from '../utils/assertData'
 
 export type Status = 'signin' | 'inited';
 
