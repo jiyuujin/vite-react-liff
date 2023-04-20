@@ -11,7 +11,7 @@
       }
     },
     "ja-technical-writing/max-kanji-continuous-len": {
-      max: 8
+      "max": 8
     },
     "ja-technical-writing/no-exclamation-question-mark": false,
     "spellcheck-tech-word": true,
