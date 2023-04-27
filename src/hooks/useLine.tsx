@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { assertData } from '../utils/assertData'
 
-export type Status = 'signin' | 'inited';
+export type Status = 'signin' | 'inited'
 
 export const useLine = () => {
   const [liffObject, setLiffObject] = useState<any | null>(null)
