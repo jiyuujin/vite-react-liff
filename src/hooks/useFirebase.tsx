@@ -1,12 +1,12 @@
-import { useEffect } from 'react'
-import { getAuth, onAuthStateChanged } from '@firebase/auth'
-import { setupFirebase, useAuth } from '../plugins/firebase'
+import { useEffect, useState } from 'react'
+import { onAuthStateChanged } from '@firebase/auth'
+import { setupFirebase, initialize } from '../plugins/firebase'
 import { useSignIn, useSignOut } from '../contexts/UserContext'
 import { GoogleAuthProvider, signInWithRedirect } from 'firebase/auth'
 
 export const useFirebase = () => {
   const provider = new GoogleAuthProvider()
-  const auth = useAuth()
+  const [auth, setAuth] = useState<any | undefined>()
   const { signIn } = useSignIn()
   const { signOut } = useSignOut()
 
@@ -21,9 +21,10 @@ export const useFirebase = () => {
   useEffect(() => {
     setupFirebase()
 
-    const auth = getAuth()
+    const _auth = initialize()
+    setAuth(_auth)
 
-    onAuthStateChanged(auth, (user) => {
+    onAuthStateChanged(_auth, (user) => {
       if (user) {
         signIn(user)
       } else {
