@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { assertData } from '../utils/assertData'
 import { Status } from './useLine'
 
 interface UseLineInfoProps {
@@ -14,10 +13,8 @@ export const useLineInfo = ({ liff, status }: UseLineInfoProps) => {
   if (status !== 'inited')
     return { profile: { displayName, pictureUrl }, version: '' }
 
-  assertData(liff)
-
   liff
-    .getProfile()
+    ?.getProfile()
     .then((profile: any) => {
       setDisplayName(profile.displayName)
       setPictureUrl(profile.pictureUrl)
@@ -26,7 +23,7 @@ export const useLineInfo = ({ liff, status }: UseLineInfoProps) => {
       console.error({ err })
     })
 
-  const version = liff.getVersion()
+  const version = liff?.getVersion()
 
   return {
     profile: { displayName, pictureUrl },
