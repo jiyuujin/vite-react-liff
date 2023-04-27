@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { assertData } from '../utils/assertData'
 
 export type Status = 'signin' | 'inited'
 
@@ -7,14 +6,12 @@ export const useLine = () => {
   const [liffObject, setLiffObject] = useState<any | null>(null)
   const [status, setStatus] = useState<Status>('signin')
 
-  assertData(liffObject)
-
   const login = () => {
-    liffObject.login({})
+    liffObject?.login({})
   }
 
   const logout = () => {
-    liffObject.logout()
+    liffObject?.logout()
   }
 
   useEffect(() => {

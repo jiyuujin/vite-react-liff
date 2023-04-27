@@ -1,4 +1,3 @@
-import { assertData } from '../utils/assertData'
 import { Status } from './useLine'
 
 interface UseLineMessageProps {
@@ -7,12 +6,10 @@ interface UseLineMessageProps {
 }
 
 export const useLineMessage = ({ liff, status }: UseLineMessageProps) => {
-  assertData(liff)
-
   const sendMessages = async () => {
     if (status !== 'inited') return
 
-    await liff.sendMessages([
+    await liff?.sendMessages([
       {
         type: 'text',
         text: 'Hello World',
