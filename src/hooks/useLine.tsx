@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import liff from '@line/liff'
 
 export type Status = 'signin' | 'inited'
 
@@ -17,17 +18,15 @@ export const useLine = () => {
   useEffect(() => {
     if (status === 'inited') return
 
-    import('@line/liff').then((liff: any) => {
-      liff
-        .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
-        .then(() => {
-          setLiffObject(liff)
-          if (liff.isLoggedIn()) setStatus('inited')
-        })
-        .catch((err: any) => {
-          console.error({ err })
-        })
-    })
+    liff
+      .init({ liffId: import.meta.env.VITE_APP_LIFF_ID })
+      .then(() => {
+        setLiffObject(liff)
+        if (liff.isLoggedIn()) setStatus('inited')
+      })
+      .catch((err: any) => {
+        console.error({ err })
+      })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
