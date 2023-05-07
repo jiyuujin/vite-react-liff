@@ -48,7 +48,7 @@ jobs:
           VITE_APP_FIREBASE_STORAGE_BUCKET: ${{ secrets.VITE_APP_FIREBASE_STORAGE_BUCKET }}
           VITE_APP_FIREBASE_SENDER_ID: ${{ secrets.VITE_APP_FIREBASE_SENDER_ID }}
           VITE_APP_LIFF_ID: ${{ secrets.VITE_APP_LIFF_ID }}
-          VITE_APP_OPENAPI_SECRET: ${{ secrets.VITE_APP_OPENAPI_SECRET }}
+          VITE_APP_OPENAI_SECRET: ${{ secrets.VITE_APP_OPENAI_SECRET }}
 
       - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0

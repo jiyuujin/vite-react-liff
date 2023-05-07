@@ -1,6 +1,6 @@
-const OPENAPI_CHAT_COMPLETIONS_API =
+const OPENAI_CHAT_COMPLETIONS_API =
   'https://api.openai.com/v1/chat/completions'
-const OPENAPI_SECRET = import.meta.env.VITE_APP_OPENAPI_SECRET
+const OPENAI_SECRET = import.meta.env.VITE_APP_OPENAI_SECRET
 
 export interface Message {
   role: 'system' | 'user' | 'assistant';
@@ -14,11 +14,11 @@ export const useChatCompletion = () => {
       messages,
     })
 
-    const res = await fetch(OPENAPI_CHAT_COMPLETIONS_API, {
+    const res = await fetch(OPENAI_CHAT_COMPLETIONS_API, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${OPENAPI_SECRET}`,
+        Authorization: `Bearer ${OPENAI_SECRET}`,
       },
       body,
     })
