@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react'
 import RecordRTC, { RecordRTCPromisesHandler } from 'recordrtc'
 
-export const useRecorder = (recorderType: RecordRTC.Options['type']) => {
+export const useRecorder = () => {
   const [recorder, setRecorder] = useState<
     RecordRTCPromisesHandler | undefined
   >()
+  const [blob, setBlob] = useState<Blob>()
+  const [formData, setFormData] = useState<FormData>()
 
-  const initializer = async () => {
+  const initializer = async (recorderType: RecordRTC.Options['type']) => {
     const stream = await navigator.mediaDevices.getUserMedia({
       video: false,
       audio: true,
@@ -17,10 +19,24 @@ export const useRecorder = (recorderType: RecordRTC.Options['type']) => {
     setRecorder(recorder)
   }
 
+  const updateFormData = () => {
+    if (!blob) return
+
+    const file = new File([blob], 'test.mp3', {
+      type: 'audio/mp3',
+    })
+
+    const data = new FormData()
+    data.append('file', file)
+    data.append('model', 'whisper-1')
+
+    setFormData(data)
+  }
+
   useEffect(() => {
-    initializer()
+    initializer('audio')
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  return { recorder }
+  return { recorder, formData, setBlob, updateFormData }
 }
