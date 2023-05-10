@@ -32,7 +32,7 @@ GitPod の拡張を利用すれば楽です。 Google Chrome にて、[gitpod](h
 
 ![](/images/github-liff-vote-project.png)
 
-Github からログインし、プロジェクトを作成します。
+GitHub からログインし、プロジェクトを作成します。
 
 なお、こちら [GitPod 実行用 URL](https://gitpod.io/#https://github.com/jiyuujin/template-vite-react/tree/feature/line-event_2022.1) からも進められます。
 
