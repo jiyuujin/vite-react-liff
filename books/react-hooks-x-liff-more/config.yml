@@ -1,0 +1,38 @@
+title: "React で LIFF アプリを作ろう (設計重視編)"
+summary: 
+  React Tutorial から一歩踏み出してみたい人 / バックエンド経験があり、フロントを触ってみたい人へ
+
+  LINE API と連携して、ユーザー連携や LINE へのメッセージなどを解説していきます。
+
+  なお、昨年と違う点として、カスタムフックの作成をはじめ設計術の一端を学べる教材となっています。
+
+topics: ["vite", "react", "liff", "line", "chatgpt"] # 5 つまで
+published: false # 下書きは false
+price: 0
+chapters:
+  - page1
+    # 今回のゴールを説明する
+    # 軽い vite / liff の用語の説明をしたい
+  - page2
+    # 環境構築: gitpod / vite
+    # Goal: web page が見えるまで
+  - page3
+    # 環境構築: liff account を作成
+    # Goal: LIFF ID の作成
+  - page4
+    # ハンズオン: LINE Login できるところまで
+    # Goal: ログイン / ログアウト できる
+  - page5
+    # 解説: カスタムフック化の有意性について
+  - page6
+    # 解説: Firebase 用カスタムフックを作成する
+  - page7
+    # 解説: LIFF 用カスタムフックを作成する
+  - page8
+    # 解説: Vue 3 や Svelte でも LIFF 用カスタムフックを作成する
+  - page9
+    # LIFF v2.22.0 のプラガブル SDK を利用する
+  - page10
+    # チャレンジ: ChatGPT を利用
+  - page11
+    # 謝辞
