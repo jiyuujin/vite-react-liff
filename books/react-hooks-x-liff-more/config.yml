@@ -7,7 +7,8 @@ summary:
   なお、昨年と違う点として、カスタムフックの作成をはじめ設計術の一端を学べる教材となっています。
 
 topics: ["vite", "react", "liff", "line", "chatgpt"] # 5 つまで
-published: false # 下書きは false
+publish-on: 2023-05-17
+published: true # 下書きは false
 price: 0
 chapters:
   - page1
