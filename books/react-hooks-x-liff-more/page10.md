@@ -375,4 +375,4 @@ export function Top() {
 
 なお後日、個人ブログの記事でも紹介させていただきます。
 
-TBD
+https://blog.nekohack.me/posts/chatgpt-reactchat
